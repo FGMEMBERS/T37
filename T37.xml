@@ -65,49 +65,49 @@
    AC_IZZ       11183		<!-- Roskam -->
    AC_IXZ       0		<!-- Roskam -->
    AC_EMPTYWT   4056		<!-- Roskam defines 6360 -->
-   AC_CGLOC     211.2  0.0 -8.8
-   AC_AERORP    211.2  0.0  0.0
-   AC_EYEPTLOC  70.4  0.0 38.0
-   AC_VRP       211.2  0.0 -8.8
+   AC_CGLOC       0.0  0.0 -8.8
+   AC_AERORP      0.0  0.0  0.0
+   AC_EYEPTLOC  -13.1  0.0 18.6
+   AC_VRP      -118.57 0.0 -8.8
  </METRICS>
  <UNDERCARRIAGE>
-  AC_GEAR NOSE_LG   45.8  0.0 -42.2 1974.0 658.0  0.5  0.8  0.02 STEERABLE NONE  5.0 RETRACT
-  AC_GEAR LEFT_MLG  221.8 -36.5 -42.2 6580.0 1316.0  0.5  0.8  0.02 FIXED LEFT  0 RETRACT
-  AC_GEAR RIGHT_MLG 221.8 36.5 -42.2 6580.0 1316.0  0.5  0.8  0.02 FIXED RIGHT 0 RETRACT
+  AC_GEAR NOSE_LG  -61.57 0.0 -31.4 3274.0 658.0  0.5  0.8  0.02 STEERABLE NONE  5.0 RETRACT
+  AC_GEAR LEFT_MLG    6.7 -31.7 -29.9 6580.0 1316.0  0.5  0.8  0.02 FIXED LEFT  0 RETRACT
+  AC_GEAR RIGHT_MLG   6.7 31.7 -29.9 6580.0 1316.0  0.5  0.8  0.02 FIXED RIGHT 0 RETRACT
  </UNDERCARRIAGE>
  <PROPULSION>
   <AC_ENGINE FILE="J69-T25_sim">
-    XLOC 291.996
-    YLOC -20
+    XLOC  40.0
+    YLOC -30.0
     ZLOC 0
     PITCH 0
     YAW 0
     FEED 0
   </AC_ENGINE>
   <AC_THRUSTER FILE="direct">
-    XLOC 291.996
-    YLOC -20
+    XLOC  40.0
+    YLOC -30.0
     ZLOC 0
     PITCH 0
     YAW 0
   </AC_THRUSTER>
   <AC_ENGINE FILE="J69-T25_sim">
-    XLOC 291.996
-    YLOC 20
+    XLOC  40.0
+    YLOC 30.0
     ZLOC 0
     PITCH 0
     YAW 0
     FEED 1
   </AC_ENGINE>
   <AC_THRUSTER FILE="direct">
-    XLOC 291.996
-    YLOC 20
+    XLOC  40.0
+    YLOC 30.0
     ZLOC 0
     PITCH 0
     YAW 0
   </AC_THRUSTER>
   <AC_TANK TYPE="FUEL" NUMBER="0">
-    XLOC 211.1976 
+    XLOC  0.0
     YLOC 0 
     ZLOC -8.7999 
     RADIUS 1 
@@ -115,7 +115,7 @@
     CONTENTS   350.0
   </AC_TANK>
   <AC_TANK TYPE="FUEL" NUMBER="1">
-    XLOC 211.1976 
+    XLOC 0.0
     YLOC 0 
     ZLOC -8.7999 
     RADIUS 1 
@@ -338,6 +338,12 @@
        aero/qbar-psf|metrics/Sw-sqft|aero/beta-rad
        -0.346
     </COEFFICIENT>
+    <!-- H-912 -->
+    <COEFFICIENT NAME="DCYbdf" TYPE="VALUE">
+       Delta_Side_force_due_to_beta_due_to_gear
+       aero/qbar-psf|metrics/Sw-sqft|aero/beta-rad|gear/gear-pos-norm
+       -0.2478
+    </COEFFICIENT>
     <!-- Roskam -->
     <COEFFICIENT NAME="CYp" TYPE="VALUE">
        Side_force_due_to_roll_rate
@@ -376,6 +382,18 @@
        aero/qbar-psf|metrics/Sw-sqft|metrics/bw-ft|aero/bi2vel|velocities/r-aero-rad_sec
        0.0926
     </COEFFICIENT>
+    <!-- H-912 -->
+    <COEFFICIENT NAME="DClrDg" TYPE="VALUE">
+       Roll_moment_due_to_yaw_rate_due_to_gear
+       aero/qbar-psf|metrics/Sw-sqft|metrics/bw-ft|aero/bi2vel|velocities/r-aero-rad_sec|gear/gear-pos-norm
+       0.1
+    </COEFFICIENT>
+    <!-- H-912 -->
+    <COEFFICIENT NAME="DClrDf" TYPE="VALUE">
+       Delta_Roll_moment_due_to_yaw_rate_due_to_flaps
+       aero/qbar-psf|metrics/Sw-sqft|metrics/bw-ft|aero/bi2vel|velocities/r-aero-rad_sec|fcs/components/flaps-control/output-norm
+       0.18
+    </COEFFICIENT>
     <!-- Roskam -->
     <COEFFICIENT NAME="Clda" TYPE="VECTOR">
        Roll_moment_due_to_aileron
@@ -384,6 +402,12 @@
        aero/qbar-psf|metrics/Sw-sqft|metrics/bw-ft|fcs/left-aileron-pos-rad
        0.0       0.181
        2.0       0.040
+    </COEFFICIENT>
+    <!-- H-912 -->
+    <COEFFICIENT NAME="DCldaDf" TYPE="VALUE">
+       Delta_Roll_moment_due_to_aileron_due_to_flaps
+       aero/qbar-psf|metrics/Sw-sqft|metrics/bw-ft|fcs/left-aileron-pos-rad|fcs/components/flaps-control/output-norm
+       -0.02
     </COEFFICIENT>
     <!-- Roskam -->
     <COEFFICIENT NAME="Cldr" TYPE="VALUE">
@@ -434,11 +458,29 @@
        aero/qbar-psf|metrics/Sw-sqft|metrics/bw-ft|aero/beta-rad
        0.1106
     </COEFFICIENT>
+    <!-- H-912 -->
+    <COEFFICIENT NAME="DCnbDg" TYPE="VALUE">
+       Delta_Yaw_moment_due_to_beta_due_to_gear
+       aero/qbar-psf|metrics/Sw-sqft|metrics/bw-ft|aero/mag-beta-rad|gear/gear-pos-norm
+       -0.00963
+    </COEFFICIENT>
+    <!-- H-912 -->
+    <COEFFICIENT NAME="DCnbDf" TYPE="VALUE">
+       Delta_Yaw_moment_due_to_beta_due_to_flaps
+       aero/qbar-psf|metrics/Sw-sqft|metrics/bw-ft|aero/mag-beta-rad|fcs/components/flaps-control/output-norm
+       -0.00882
+    </COEFFICIENT>
     <!-- Roskam -->
     <COEFFICIENT NAME="Cnp" TYPE="VALUE">
        Yaw_moment_due_to_roll_rate
        aero/qbar-psf|metrics/Sw-sqft|metrics/bw-ft|aero/bi2vel|velocities/p-aero-rad_sec
        -0.0243
+    </COEFFICIENT>
+    <!-- H-912 -->
+    <COEFFICIENT NAME="DCnpDf" TYPE="VALUE">
+       Delta_Yaw_moment_due_to_roll_rate_due_to_flaps
+       aero/qbar-psf|metrics/Sw-sqft|metrics/bw-ft|aero/bi2vel|velocities/p-aero-rad_sec
+       -0.02
     </COEFFICIENT>
     <!-- Roskam -->
     <COEFFICIENT NAME="Cnr" TYPE="VALUE">
@@ -452,7 +494,13 @@
        aero/qbar-psf|metrics/Sw-sqft|metrics/bw-ft|fcs/rudder-pos-rad
        -0.0365
     </COEFFICIENT>
-    <!-- Roskam -->
+    <!-- H-912 -->
+    <COEFFICIENT NAME="DCndrDf" TYPE="VALUE">
+       Delta_Yaw_moment_due_to_rudder_due_to_flaps
+       aero/qbar-psf|metrics/Sw-sqft|metrics/bw-ft|fcs/rudder-pos-rad|fcs/components/flaps-control/output-norm
+       0.002
+    </COEFFICIENT>
+    <!-- H-912 -->
     <COEFFICIENT NAME="Cnda" TYPE="VALUE">
        Adverse_yaw
        aero/qbar-psf|metrics/Sw-sqft|metrics/bw-ft|fcs/left-aileron-pos-rad
