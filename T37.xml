@@ -1,4 +1,4 @@
-<FDM_CONFIG NAME="T37" VERSION="1.60">
+<FDM_CONFIG NAME="T37" VERSION="1.61">
 <!--
   File:     T37.xml
   Author:   Aero-Matic v 0.7
@@ -68,6 +68,7 @@
    AC_CGLOC     211.2  0.0 -8.8
    AC_AERORP    211.2  0.0  0.0
    AC_EYEPTLOC  70.4  0.0 38.0
+   AC_VRP       211.2  0.0 -8.8
  </METRICS>
  <UNDERCARRIAGE>
   AC_GEAR NOSE_LG   45.8  0.0 -42.2 1974.0 658.0  0.5  0.8  0.02 STEERABLE NONE  5.0 RETRACT
