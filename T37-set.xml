@@ -17,7 +17,7 @@
   
   <sound>
    <audible>true</audible>
-   <path>Aircraft/a4/a4-sound.xml</path>
+   <path>Aircraft/T37/t37-sound.xml</path>
   </sound>
 
   <virtual-cockpit archive="y">true</virtual-cockpit>
