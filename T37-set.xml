@@ -16,7 +16,6 @@
   </systems> 
   
   <sound>
-   <audible>true</audible>
    <path>Aircraft/T37/t37-sound.xml</path>
   </sound>
 
