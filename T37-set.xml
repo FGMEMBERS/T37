@@ -1,7 +1,65 @@
 <?xml version="1.0"?>
 
-<PropertyList include="T37-jsbsim-set.xml">
+<PropertyList>
+
  <sim>
-  <description>Alias for T37-jsbsim.</description>
+
+  <description>Cessna T-37</description>
+ 
+  <flight-model>jsb</flight-model>
+  <aero>T37</aero>
+  
+  <systems>
+   <electrical>
+    <path>Aircraft/Generic/generic-electrical.xml</path>
+   </electrical>
+  </systems> 
+  
+  <sound>
+   <audible>true</audible>
+   <path>Aircraft/a4/a4-sound.xml</path>
+  </sound>
+
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+
+  <panel>
+    <visibility>false</visibility>
+  </panel>
+
+  <model>
+   <path>Aircraft/T37/Models/t37.xml</path>
+  </model>
+
+  <view n="0">
+   <internal archive="y">true</internal>
+   <config>
+    <pitch-offset-deg>-5.0</pitch-offset-deg>
+    <x-offset-m archive="y">-0.33</x-offset-m>
+    <y-offset-m archive="y">0.80</y-offset-m>
+    <z-offset-m archive="y">-0.33</z-offset-m>
+   </config>
+  </view>
+
  </sim>
+
+ <engines>
+   <engine n="0">
+    <running>true</running>
+   </engine>
+   <engine n="1">
+    <running>true</running>
+   </engine>
+  </engines>
+
+  <consumables>
+  <fuel>
+   <tank n="0">
+    <level-gal_us archive="y">500</level-gal_us>
+   </tank>
+   <tank n="1">
+    <level-gal_us archive="y">500</level-gal_us>
+   </tank>
+  </fuel>
+ </consumables>
+
 </PropertyList>
