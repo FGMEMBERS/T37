@@ -5,6 +5,7 @@
  <sim>
 
   <description>Cessna T-37</description>
+  <status>beta</status>
  
   <flight-model>jsb</flight-model>
   <aero>T37</aero>
