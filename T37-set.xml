@@ -5,6 +5,7 @@
  <sim>
 
   <description>Cessna T-37</description>
+  <author>Erik Hofman</author>
   <status>beta</status>
  
   <flight-model>jsb</flight-model>
