@@ -11,12 +11,6 @@
   <flight-model>jsb</flight-model>
   <aero>T37</aero>
   
-  <systems>
-   <electrical>
-    <path>Aircraft/Generic/generic-electrical.xml</path>
-   </electrical>
-  </systems> 
-  
   <sound>
    <path>Aircraft/T37/t37-sound.xml</path>
   </sound>
