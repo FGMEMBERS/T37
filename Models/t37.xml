@@ -154,7 +154,18 @@
   </axis>
  </animation>
 
-<!--
+ <animation>
+  <type>select</type>
+  <object-name>nose_wheel</object-name>
+  <object-name>nose_strut</object-name>
+  <condition>
+   <greater-than>
+    <property>gear/gear[0]/position-norm</property>
+    <value>0</value>
+   </greater-than>
+  </condition>
+ </animation>
+
  <animation>
   <type>rotate</type>
   <object-name>nose_wheel</object-name>
@@ -181,9 +192,9 @@
   <factor>-120</factor>
   <offset-deg>120</offset-deg>
   <center>
-   <x-m>-4.02</x-m>
+   <x-m>-2.21</x-m>
    <y-m>0.0</y-m>
-   <z-m>0.11</z-m>
+   <z-m>-0.25</z-m>
   </center>
   <axis>
    <x>0</x>
@@ -193,23 +204,49 @@
  </animation>
 
  <animation>
+  <type>select</type>
+  <object-name>right_main_wheel</object-name>
+  <object-name>right_lower_strut</object-name>
+  <object-name>right_upper_strut</object-name>
+  <condition>
+   <greater-than>
+    <property>gear/gear[1]/position-norm</property>
+    <value>0</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>right_main_wheel</object-name>
   <object-name>right_lower_strut</object-name>
   <object-name>right_upper_strut</object-name>
   <property>/gear/gear[1]/position-norm</property>
-  <factor>-150</factor>
-  <offset-deg>150</offset-deg>
+  <factor>-84</factor>
+  <offset-deg>84</offset-deg>
   <center>
-   <x-m>0.48</x-m>
-   <y-m>0.24</y-m>
-   <z-m>0.24</z-m>
+   <x-m>0.32</x-m>
+   <y-m>1.92</y-m>
+   <z-m>0.17</z-m>
   </center>
   <axis>
-   <x>-0.4</x>
-   <y>0.667</y>
+   <x>-1</x>
+   <y>0</y>
    <z>0</z>
   </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>left_main_wheel</object-name>
+  <object-name>left_lower_strut</object-name>
+  <object-name>left_upper_strut</object-name>
+  <condition>
+   <greater-than>
+    <property>gear/gear[2]/position-norm</property>
+    <value>0</value>
+   </greater-than>
+  </condition>
  </animation>
 
  <animation>
@@ -218,19 +255,18 @@
   <object-name>left_lower_strut</object-name>
   <object-name>left_upper_strut</object-name>
   <property>/gear/gear[2]/position-norm</property>
-  <factor>-150</factor>
-  <offset-deg>150</offset-deg>
+  <factor>-84</factor>
+  <offset-deg>84</offset-deg>
   <center>
-   <x-m>0.48</x-m>
-   <y-m>-0.24</y-m>
-   <z-m>0.24</z-m>
+   <x-m>0.32</x-m>
+   <y-m>-1.92</y-m>
+   <z-m>0.17</z-m>
   </center>
   <axis>
-   <x>0.4</x>
-   <y>0.667</y>
+   <x>1</x>
+   <y>0</y>
    <z>0</z>
   </axis>
  </animation>
--->
 
 </PropertyList>
