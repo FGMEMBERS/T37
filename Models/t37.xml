@@ -10,6 +10,13 @@
    <pitch-deg>0.0</pitch-deg>
  </offsets>
 
+<!-- no shadows -->
+ <animation>
+  <type>noshadow</type>
+  <object-name>markings</object-name>
+  <object-name>floor_mats</object-name>
+ </animation>
+
  <!-- sub models -->
  <model>
   <name>RudderAndStickPilot</name>
