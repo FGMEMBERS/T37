@@ -6,7 +6,7 @@
 
   <engine>
    <name>whine</name>
-   <path>Sounds/whine.wav</path>
+   <path>Sounds/turbojet_fan.wav</path>
    <mode>looped</mode>
    <property>/engines/engine[0]/running</property>
    <pitch>
@@ -18,7 +18,7 @@
 
   <engine>
    <name>whine</name>
-   <path>Sounds/whine.wav</path>
+   <path>Sounds/turbojet_fan.wav</path>
    <mode>looped</mode>
    <property>/engines/engine[1]/running</property>
    <pitch>
@@ -112,7 +112,7 @@
   <wind>
    <name>wind</name>
    <mode>looped</mode>
-   <path>Sounds/wind.wav</path>
+   <path>Sounds/wind-8khz.wav</path>
    <property>/velocities/airspeed-kt</property>
    <volume>
     <property>/position/altitude-ft</property>
