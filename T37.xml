@@ -282,6 +282,7 @@
                 </traverse>
                 <output>fcs/flap-pos-norm</output>
             </kinematic>
+
         </channel>
         <channel name="Landing Gear">
             <kinematic name="Gear Control">
