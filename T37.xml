@@ -35,7 +35,7 @@
     <fileheader>
         <author> Erik Hofman </author>
         <filecreationdate> 2001-01-01 </filecreationdate>
-        <version> $Revision$ </version>
+        <version> $Revision: 1.9 $ </version>
         <description> T-37 trainer </description>
     </fileheader>
 
@@ -79,9 +79,15 @@
     <ground_reactions>
         <contact type="BOGEY" name="NOSE_LG">
             <location unit="IN">
-                <x> -61.57 </x>
-                <y> 0 </y>
-                <z> -31.4 </z>
+				<!-- 
+					 <x> -61.57 </x>
+					 <y> 0 </y>
+					 <z> -31.4 </z>
+					 -->
+					 <x> -76.77 </x>
+					 <y> 0 </y>
+					 <z> -33.07 </z>
+					 
             </location>
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
@@ -94,9 +100,15 @@
         </contact>
         <contact type="BOGEY" name="LEFT_MLG">
             <location unit="IN">
-                <x> 6.7 </x>
-                <y> -31.7 </y>
-                <z> -29.9 </z>
+				<!--
+					<x> 6.7 </x>
+					<y> -31.7 </y>
+					<z> -29.9 </z>
+					-->
+					<x> 11.02 </x>
+					<y> -84.65 </y>
+					<z> -32.38 </z>
+					
             </location>
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
@@ -109,9 +121,15 @@
         </contact>
         <contact type="BOGEY" name="RIGHT_MLG">
             <location unit="IN">
-                <x> 6.7 </x>
-                <y> 31.7 </y>
-                <z> -29.9 </z>
+				<!--
+					<x> 6.7 </x>
+					<y> 31.7 </y>
+					<z> -29.9 </z>
+					-->
+					<x> 11.02 </x>
+					<y> 84.65 </y>
+					<z> -32.38 </z>
+					
             </location>
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>

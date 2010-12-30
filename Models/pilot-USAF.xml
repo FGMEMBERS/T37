@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>pilot-USAF.ac</path>
+
+ <!--  conceal player's own head in Cockpit View-->
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>L-head</object-name>
+	 <object-name>L-face-mask</object-name>
+	 <object-name>L-mask-tube</object-name>
+	 <object-name>L-visor</object-name>
+	 <object-name>L-helmet</object-name>
+	 <object-name>L-oxy-tube</object-name>
+	 <condition>
+		 <not>
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+		 </not>
+	 </condition>
+ </animation>
+ 
+</PropertyList>
