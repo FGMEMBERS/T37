@@ -1,17 +1,17 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "metal-shadow" rgb 0.533333 0.533333 0.533333 amb 0.2 0.2 0.2 emis 0 0 0 spec 0 0 0 shi 10 trans 0
-MATERIAL "white" rgb 1 1 1 amb 0.2 0.2 0.2 emis 0 0 0 spec 1 1 1 shi 82 trans 0
-MATERIAL "clear-plexiglas" rgb 0.946809 0.934575 1 amb 0.2 0.2 0.2 emis 0 0 0 spec 1 1 1 shi 75 trans 0.827
-MATERIAL "interior-gray" rgb 0.387077 0.384 0.390183 amb 0.118 0.118 0.118 emis 0 0 0 spec 0.129 0.129 0.129 shi 125 trans 0
-MATERIAL "ac3dmat7.001" rgb 0.314 0.525 0.49 amb 0.082 0.082 0.082 emis 0 0 0 spec 0.075 0.075 0.075 shi 2 trans 0
-MATERIAL "ac3dmat7" rgb 0.129 0.384 0.255 amb 0.118 0.118 0.118 emis 0 0 0 spec 0.129 0.129 0.129 shi 125 trans 0
+MATERIAL "metal-shadow" rgb 0.533333 0.533333 0.533333 amb 0.533333 0.533333 0.533333 emis 0 0 0 spec 0 0 0 shi 10 trans 0
+MATERIAL "white" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 82 trans 0
+MATERIAL "clear-plexiglas" rgb 0.946809 0.934575 1 amb 0.946809 0.934575 1 emis 0 0 0 spec 1 1 1 shi 75 trans 0.827
+MATERIAL "interior-gray" rgb 0.387077 0.384 0.390183 amb 0.387077 0.384 0.390183 emis 0 0 0 spec 0.129 0.129 0.129 shi 125 trans 0
+MATERIAL "ac3dmat7.001" rgb 0.314 0.525 0.49 amb 0.314 0.525 0.49 emis 0 0 0 spec 0.075 0.075 0.075 shi 2 trans 0
+MATERIAL "ac3dmat7" rgb 0.129 0.384 0.255 amb 0.129 0.384 0.255 emis 0 0 0 spec 0.129 0.129 0.129 shi 125 trans 0
 MATERIAL "DefaultWhite" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
-MATERIAL "ac3dmat0" rgb 0 0 0 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.075 0.075 0.075 shi 128 trans 0
-MATERIAL "ac3dmat1.004" rgb 1 1 1 amb 0.2 0.2 0.2 emis 0 0 0 spec 1 1 1 shi 82 trans 0
-MATERIAL "ac3dmat3" rgb 0.573 0 0 amb 0.108667 0.108667 0.108667 emis 0 0 0 spec 0.004 0.043 0 shi 10 trans 0
-MATERIAL "black-matte" rgb 0.266667 0.266667 0.266667 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.5 0.5 0.5 shi 10 trans 0
-MATERIAL "tinted-plexiglas" rgb 1 0.959043 0.902127 amb 0.2 0.2 0.2 emis 0 0 0 spec 1 1 1 shi 75 trans 0.827
+MATERIAL "ac3dmat0" rgb 0 0 0 amb 0 0 0 emis 0 0 0 spec 0.075 0.075 0.075 shi 128 trans 0
+MATERIAL "ac3dmat1.004" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 82 trans 0
+MATERIAL "ac3dmat3" rgb 0.573 0 0 amb 0.573 0 0 emis 0 0 0 spec 0.004 0.043 0 shi 10 trans 0
+MATERIAL "black-matte" rgb 0.266667 0.266667 0.266667 amb 0.266667 0.266667 0.266667 emis 0 0 0 spec 0.5 0.5 0.5 shi 10 trans 0
+MATERIAL "tinted-plexiglas" rgb 1 0.959043 0.902127 amb 1 0.959043 0.902127 emis 0 0 0 spec 1 1 1 shi 75 trans 0.827
 OBJECT world
 kids 74
 OBJECT group
