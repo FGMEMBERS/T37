@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+  <model>
+   <livery>
+    <name type="string">Pakistan Air Force Sherdils</name>
+	<texture-main>Liveries/Sherdils/T-37-livery-main.png</texture-main>
+	<texture-wings>Liveries/Sherdils/T-37-livery-wings.png</texture-wings>
+   </livery>
+  </model>
+ </sim>
+</PropertyList>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+  <model>
+   <livery>
+    <name type="string">U.S. Air Force</name>
+    <texture-main>Liveries/USAF/T-37-livery-main.png</texture-main>
+	<texture-wings>Liveries/USAF/T-37-livery-wings.png</texture-wings>
+   </livery>
+  </model>
+ </sim>
+</PropertyList>
