@@ -1,0 +1,660 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>T-37.ac</path>
+
+ <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.2</z-m>
+   <pitch-deg>0.0</pitch-deg>
+ </offsets>
+
+<!-- no shadows -->
+ <animation>
+  <type>noshadow</type>
+  <object-name>floor-mats.L</object-name>
+  <object-name>floor-mats.R</object-name>
+ </animation>
+
+ 
+ <model>
+	 <name>pilot</name>
+	 <path>Aircraft/T37/Models/pilot-USAF.xml</path>
+	 <offsets>
+		 <x-m>-0.722</x-m>
+		 <y-m>-0.32</y-m>
+		 <z-m>0.812</z-m>
+	 </offsets> 
+ </model>
+ 
+ <model>
+	 <name>instructor</name>
+	 <path>Aircraft/T37/Models/instructor-USAF.xml</path>
+	 <offsets>
+		 <x-m>-0.722</x-m>
+		 <y-m>0.32</y-m>
+		 <z-m>0.812</z-m>
+	 </offsets> 
+ </model>
+ 
+ <!-- Pilot inside can be toggled from menu, but is always visible from outside -->
+ 
+<animation>
+	 <type>select</type>
+	 <object-name>pilot</object-name>
+	 <condition>
+		 <or>
+			 <property>sim/model/show-pilot</property>
+			 <not>
+				 <equals>
+					 <property>sim/current-view/view-number</property>
+					 <value>0</value>
+				 </equals>
+			 </not>
+		 </or>
+	 </condition>
+ </animation>
+
+<!-- Pilot submodel -->
+
+<!-- Instructor (copilot) model can be toggled from menu -->
+
+<animation>
+	<type>select</type>
+	<object-name>instructor</object-name>
+	<condition>
+		<property>sim/model/show-instructor</property>
+	</condition>
+</animation>
+
+ 
+<!-- sub models -->
+ <model>
+  <name>RudderAndStickPilot</name>
+  <path>Aircraft/T37/Models/rudderandstick.xml</path>
+  <offsets>
+   <x-m>-1.05</x-m>
+   <y-m>-0.32</y-m>
+<!--
+	<z-m>-0.05</z-m>
+-->
+	<z-m>-0.184</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>ThrottleConsolePilot</name>
+  <path>Aircraft/T37/Models/throttleconsole.xml</path>
+  <offsets>
+<!--
+	<x-m>-1.07</x-m>
+   <y-m>-0.73</y-m>
+   <z-m>-0.186</z-m>
+-->
+   <x-m>-1.061</x-m>
+   <y-m>-0.623</y-m>
+   <z-m>-0.100</z-m>
+</offsets>
+ </model>
+
+ 
+ <model>
+  <name>RudderAndStickInstructor</name>
+  <path>Aircraft/T37/Models/rudderandstick.xml</path>
+  <offsets>
+   <x-m>-1.05</x-m>
+   <y-m>0.32</y-m>
+   <z-m>-0.184</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>ThrottleConsoleInstructor</name>
+  <path>Aircraft/T37/Models/throttleconsole.xml</path>
+  <offsets>
+   <x-m>-1.061</x-m>
+   <y-m>0.00</y-m>
+   <z-m>-0.100</z-m>
+  </offsets>
+ </model>
+-->
+ <!-- animations -->
+ <animation>
+  <type>rotate</type>
+  <object-name>right_aileron</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>-20</factor>
+  <center>
+   <x-m>0.78</x-m>
+   <y-m>3.89</y-m>
+   <z-m>0.28</z-m>
+  </center>
+  <axis>
+   <x>-0.102</x>
+   <y>1.0</y>
+   <z>0.066</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>left_aileron</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>-20</factor>
+  <center>
+   <x-m>0.78</x-m>
+   <y-m>-3.89</y-m>
+   <z-m>0.28</z-m>
+  </center>
+  
+ <axis>
+   <x>-0.102</x>
+   <y>-1.0</y>
+   <z>0.066</z>
+ </axis>
+
+</animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>right_flap</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>30</factor>
+  <center>
+   <x-m>0.99</x-m>
+   <y-m>1.48</y-m>
+   <z-m>-0.07</z-m>
+  </center>
+  <axis>
+   <x>-0.143</x>
+   <y>1.365</y>
+   <z>0.133</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>left_flap</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>-30</factor>
+  <center>
+   <x-m>0.99</x-m>
+   <y-m>-1.48</y-m>
+   <z-m>-0.07</z-m>
+  </center>
+  <axis>
+   <x>-0.143</x>
+   <y>-1.365</y>
+   <z>0.133</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RUDDER</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>20</factor>
+  <center>
+   <x-m>4.895000</x-m>
+   <y-m>0.000000</y-m>
+   <z-m>1.205000</z-m>
+  </center>
+  <axis>
+   <x>0.024383</x>
+   <y>0.000000</y>
+   <z>0.999703</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>elevator</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <factor>20</factor>
+  <center>
+   <x-m>4.890000</x-m>
+   <y-m>0.000000</y-m>
+   <z-m>1.070000</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>nose_wheel</object-name>
+  <object-name>nose_strut</object-name>
+  <condition>
+   <greater-than>
+    <property>gear/gear[0]/position-norm</property>
+    <value>0</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>nose_wheel</object-name>
+  <object-name>nose_strut</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>20</factor>
+  <center>
+   <x-m>-1.953</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.11</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>-1</z>
+  </axis>
+ </animation>
+
+ <animation>
+	<type>translate</type>
+	<object-name>nose_wheel</object-name>
+	<object-name>nose_strut</object-name>
+	<property>gear/gear[0]/compression-ft</property>
+	<factor>0.3048</factor>
+	<center>
+		<x-m>-1.950</x-m>
+		<y-m>0</y-m>
+		<z-m>0.0</z-m>
+	</center>
+	<axis>
+		<x>0.0</x>
+		<y>0.0</y>
+		<z>1.0</z>
+	 </axis>
+</animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>nose_wheel</object-name>
+  <object-name>nose_strut</object-name>
+  <property>gear/gear[0]/position-norm</property>
+  <interpolation>
+	  <entry><ind>0</ind><dep>100</dep></entry>
+	  <entry><ind>0.2</ind><dep>100</dep></entry>	<!--waiting for door-->
+	  <entry><ind>1.0</ind><dep>0.0</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>-1.88</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.29</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>nose-gear-door.L</object-name>
+	 <property>gear/gear[0]/position-norm</property>
+	 <interpolation>
+		 <entry><ind>0</ind><dep>0</dep></entry>
+		 <entry><ind>0.2</ind><dep>90</dep></entry>	
+		 <entry><ind>1.0</ind><dep>90.0</dep></entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-2.53</x-m>
+		 <y-m>-0.15</y-m>
+		 <z-m>-0.26</z-m>
+	 </center>
+	 <axis>
+		 <x>-0.651</x>
+		 <y>0</y>
+		 <z>0.098</z>
+	 </axis>
+ </animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>nose-gear-door.R</object-name>
+	 <property>gear/gear[0]/position-norm</property>
+	 <interpolation>
+		 <entry><ind>0</ind><dep>0</dep></entry>
+		 <entry><ind>0.2</ind><dep>-90</dep></entry>	
+		 <entry><ind>1.0</ind><dep>-90.0</dep></entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-2.53</x-m>
+		 <y-m>0.15</y-m>
+		 <z-m>-0.26</z-m>
+	 </center>
+	 <axis>
+		 <x>-0.651</x>
+		 <y>0</y>
+		 <z>0.098</z>
+	 </axis>
+ </animation>
+ 
+ <!-- LEFT GEAR (1)-->
+ <animation>
+	 <type>select</type>
+	 <object-name>MAIN-GEAR.L</object-name>
+<!--	 <object-name>left_main_wheel</object-name>
+	 <object-name>left_lower_strut</object-name>
+	 <object-name>left_upper_strut</object-name>
+-->
+	 <condition>
+		 <greater-than>
+			 <property>gear/gear[1]/position-norm</property>
+			 <value>0</value>
+		 </greater-than>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>left_main_wheel</object-name>
+	 <object-name>left_lower_strut</object-name>
+	 <property>gear/gear[1]/compression-m</property>
+	 <center>
+		 <x-m>0.259</x-m>
+		 <y-m>0</y-m>
+		 <z-m>0.0</z-m>
+	 </center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>0.0</y>
+		 <z>1.0</z>
+	 </axis>
+</animation>
+
+
+<animation>
+	<type>rotate</type>
+	<object-name>MAIN-GEAR.L</object-name>
+	<!--	 
+	<object-name>left_main_wheel</object-name>
+	<object-name>left_lower_strut</object-name>
+	<object-name>left_upper_strut</object-name>
+	-->
+	<property>gear/gear[1]/position-norm</property>
+
+	<interpolation>
+		<entry><ind>0</ind><dep>82</dep></entry>
+		<entry><ind>0.2</ind><dep>82</dep></entry>	<!--waiting for inner door-->
+		<entry><ind>1.0</ind><dep>0.0</dep></entry>
+	</interpolation>
+		
+	<center>
+		<x-m>0.259</x-m>
+		<y-m>-2.260</y-m>
+		<z-m>0.210</z-m> 
+	</center>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+	
+<animation>
+	<type>rotate</type>
+	<object-name>gear-cover-out.L</object-name>
+	<property>gear/gear[1]/position-norm</property>
+	<interpolation>
+		<entry><ind>0</ind><dep>0</dep></entry>
+		<entry><ind>0.2</ind><dep>0</dep></entry>	<!--waiting for inner door-->
+		<entry><ind>1.0</ind><dep>-100</dep></entry>
+	</interpolation>	
+	<center>
+		<x-m>0.26</x-m>
+		<y-m>-2.350</y-m>
+		<z-m>0.15</z-m> 
+	</center>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+		
+<animation>
+	<type>rotate</type>
+	<object-name>gear-cover-in.L</object-name>
+	<property>gear/gear[1]/position-norm</property>
+	<interpolation>
+		<entry><ind>0</ind><dep>0.0</dep></entry>
+		<entry><ind>0.2</ind><dep>90.0</dep></entry> <!--open up before gear moves-->
+		<entry><ind>1</ind><dep>90.0</dep></entry>
+	</interpolation>
+	<center>
+		<x-m>0.26</x-m>
+		<y-m>-1.21</y-m>
+		<z-m>-0.01</z-m> 
+	</center>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+				 
+<!-- RIGHT GEAR (2)-->
+ 
+<animation>
+	<type>select</type>
+	<object-name>MAIN-GEAR.R</object-name>
+	<!--
+		<object-name>right_main_wheel</object-name>
+		<object-name>right_lower_strut</object-name>
+		<object-name>right_upper_strut</object-name>
+		-->
+		<condition>
+			<greater-than>
+				<property>gear/gear[2]/position-norm</property>
+				<value>0</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+
+<animation>
+  <type>rotate</type>
+  <object-name>right_main_wheel</object-name>
+  <object-name>right_lower_strut</object-name>
+  <object-name>right_upper_strut</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  
+  <interpolation>
+	  <entry><ind>0</ind><dep>-82</dep></entry>
+	  <entry><ind>0.2</ind><dep>-82</dep></entry>	<!--waiting for inner door-->
+	  <entry><ind>1.0</ind><dep>0.0</dep></entry>
+  </interpolation>
+
+  <center>
+<!-- 
+	  <x-m>0.32</x-m>
+	  <y-m>1.92</y-m>
+	  <z-m>0.17</z-m>
+	  -->
+   
+  <x-m>0.259</x-m>
+   <y-m>2.260</y-m>
+   <z-m>0.210</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gear-cover-out.R</object-name>
+	 <property>gear/gear[2]/position-norm</property>
+		 <interpolation>
+			 <entry><ind>0</ind><dep>0</dep></entry>
+			 <entry><ind>0.2</ind><dep>0</dep></entry>	<!--waiting for inner door-->
+			 <entry><ind>1.0</ind><dep>100</dep></entry>
+		 </interpolation>
+		 
+		 <center>
+			 <x-m>0.26</x-m>
+			 <y-m>2.350</y-m>
+			 <z-m>0.15</z-m> 
+		 </center>
+		 <axis>
+			 <x>1</x>
+			 <y>0</y>
+			 <z>0</z>
+		 </axis>
+	 </animation>
+	 
+<animation>
+	<type>rotate</type>
+	<object-name>gear-cover-in.R</object-name>
+	<property>gear/gear[2]/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0.0</dep></entry>
+			<entry><ind>0.2</ind><dep>-90.0</dep></entry> <!--open up before gear moves-->
+			<entry><ind>1</ind><dep>-90.0</dep></entry>
+		</interpolation>
+		<center>
+			<x-m>0.26</x-m>
+			<y-m>1.21</y-m>
+			<z-m>-0.01</z-m> 
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+</animation>
+
+<animation>
+	<type>shader</type>
+	<shader>chrome</shader>
+	<texture>glass_shader.png</texture>
+	<object-name>windshield</object-name>
+	<object-name>canopy</object-name>
+</animation>
+			 
+  
+<!-- Instruments -->
+<model>
+	<name>ASI</name>
+	<path>Aircraft/Instruments-3d/asi300/asi300-3d.xml</path>
+	<offsets>
+		<x-m>-1.32</x-m>
+		<y-m>-0.44</y-m>
+		<z-m>0.43</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>ADF</name>
+	<path>Aircraft/Instruments-3d/adf/adf.xml</path>
+	<offsets>
+		<x-m>-1.32</x-m>
+		<y-m>-0.34</y-m>
+		<z-m>0.43</z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<name>AI</name>
+	<path>Aircraft/Instruments-3d/attitude-indicator.xml</path>
+	<offsets>
+		<x-m>-1.32</x-m>
+		<y-m>-0.25</y-m>
+		<z-m>0.43</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>alt</name>
+	<path>Aircraft/Instruments-3d/alt-2/alt2-3d.xml</path>
+	<offsets>
+		<x-m>-1.32</x-m>
+		<y-m>-0.44</y-m>
+		<z-m>0.33</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>VOR</name>
+	<path>Aircraft/Instruments-3d/vor/vor.xml</path>
+	<offsets>
+		<x-m>-1.32</x-m>
+		<y-m>-0.34</y-m>
+		<z-m>0.33</z-m>
+	</offsets>
+</model>
+ 
+ 
+<model>
+	<name>VSI</name>
+	<path>Aircraft/Instruments-3d/vsi-6/vsi-3d.xml</path>
+	<offsets>
+		<x-m>-1.32</x-m>
+		<y-m>-0.25</y-m>
+		<z-m>0.33</z-m>
+	</offsets>
+</model>
+
+<!-- object selection for livery -->
+<animation>
+	<type>material</type>
+	<object-name>flap-hinge-in.L</object-name>
+	<object-name>flap-hinge-in.R</object-name>
+	<object-name>flap-hinge-out.L</object-name>
+	<object-name>flap-hinge-out.R</object-name>
+	<object-name>gear-cover-in.L_1</object-name>
+	<object-name>gear-cover-in.R_1</object-name>
+	<object-name>gear-cover-out.L_1</object-name>
+	<object-name>gear-cover-out.R_1</object-name>
+	<object-name>left_aileron</object-name>
+	<object-name>left_flap</object-name>
+	<object-name>right_aileron</object-name>
+	<object-name>right_flap</object-name>
+	<object-name>wing.L</object-name>
+	<object-name>wing.R</object-name>
+	
+	<property-base>sim/model/livery</property-base>
+	<texture-prop>texture-wings</texture-prop>
+	<texture>T-37-livery.png</texture>
+
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>fuselage</object-name>
+	<object-name>engine-fairing</object-name>
+	<object-name>rudder,L</object-name>
+	<object-name>rudder,R</object-name>
+	<object-name>elevator</object-name>
+	<object-name>engine-duct.L</object-name>
+	<object-name>engine-duct.R</object-name>
+	<object-name>intake-lip.L</object-name>
+	<object-name>intake-lip.R</object-name>
+	<object-name>hood-scoop</object-name>
+	<object-name>horizontal_tail</object-name>
+	<object-name>nose-gear-door.L</object-name>
+	<object-name>nose-gear-door.R</object-name>
+	<object-name>nose-strakes</object-name>
+	<object-name>ventral-fin</object-name>
+	<object-name>vstab</object-name>
+	
+	<property-base>sim/model/livery</property-base>
+	<texture-prop>texture-main</texture-prop>
+	<texture>T-37-livery.png</texture>
+	
+</animation>
+
+
+</PropertyList>
