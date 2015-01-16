@@ -132,7 +132,7 @@
  </hud>
  
  <input>
-	 <keyboard n="0" include="../../Input/Keyboard/carrier-bindings.xml"> 
+	 <keyboard n="0" include="Input/Keyboard/carrier-bindings.xml"> 
 		 <key n="101">
 			 <name>e</name>
 			 <desc>Open canopy</desc>
