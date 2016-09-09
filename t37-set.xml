@@ -8,6 +8,12 @@
   <author>Erik Hofman</author>
   <status>beta</status>
  
+  <rating>
+    <FDM type="int">3</FDM>
+    <systems type="int">2</systems>
+    <cockpit type="int">1</cockpit>
+    <model type="int">4</model>
+  </rating>
   <flight-model>jsb</flight-model>
   <aero>T37</aero>
 
