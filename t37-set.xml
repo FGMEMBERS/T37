@@ -5,6 +5,10 @@
  <sim>
 
   <description>Cessna T-37</description>
+  <long-description>
+   The Cessna T-37 Tweet (designated Model 318 by Cessna) is a small, economical twin-engined jet trainer-attack type aircraft which flew for decades as a primary trainer for the United States Air Force (USAF) and in the air forces of several other nations. The A-37 Dragonfly variant served in the light attack role during the Vietnam War and continues to serve in the air forces of several South American nations.
+   The T-37 served as the U.S. Air Force's primary pilot training vehicle for over 52 years after its first flight. The USAF retired its last T-37 in 2009.
+  </long-description>
   <author>Erik Hofman</author>
   <status>beta</status>
  
@@ -16,7 +20,21 @@
   </rating>
   <flight-model>jsb</flight-model>
   <aero>T37</aero>
-
+  <tags>
+      <tag>cessna</tag>
+      <tag>low-wing</tag>
+      <tag>tricycle</tag>
+      <tag>retractable-gear</tag>
+      <tag>twin-engine</tag>
+      <tag>jet</tag>
+      <tag>1950s</tag>
+      <tag>1960s</tag>
+      <tag>1970s</tag>
+      <tag>1980s</tag>
+      <tag>1990s</tag>
+      <tag>2000s</tag>
+      <tag>trainer</tag>
+    </tags>
   
   <!--
   <instrumentation>
