@@ -9,7 +9,7 @@
    The Cessna T-37 Tweet (designated Model 318 by Cessna) is a small, economical twin-engined jet trainer-attack type aircraft which flew for decades as a primary trainer for the United States Air Force (USAF) and in the air forces of several other nations. The A-37 Dragonfly variant served in the light attack role during the Vietnam War and continues to serve in the air forces of several South American nations.
    The T-37 served as the U.S. Air Force's primary pilot training vehicle for over 52 years after its first flight. The USAF retired its last T-37 in 2009.
   </long-description>
-  <author>Erik Hofman</author>
+  <author>Erik Hofman, Paul Richter</author>
   <status>beta</status>
  
   <rating>
@@ -144,10 +144,11 @@
  </consumables>
  
  <nasal>
-	 <T-37>
+	 <T37>
 		 <file>Aircraft/T37/Nasal/systems.nas</file>
 		 <file>Aircraft/T37/Nasal/liveries.nas</file>
-	 </T-37>
+		 <file>Aircraft/T37/Nasal/doors.nas</file>
+	 </T37>
  </nasal>
 	
  <hud>
@@ -156,13 +157,13 @@
  </hud>
  
  <input>
-	 <keyboard n="0" include="Input/Keyboard/carrier-bindings.xml"> 
-		 <key n="101">
-			 <name>e</name>
-			 <desc>Open canopy</desc>
+	 <keyboard> 	 
+		 <key n="67">
+			 <name>C</name>
+			 <desc>Toggle Canopy</desc>
 			 <binding>
 				 <command>nasal</command>
-				 <script>T-37.canopyswitch(2);</script>
+				 <script>T37.toggle_canopy()</script>
 			 </binding>
 		 </key>
 	 </keyboard>

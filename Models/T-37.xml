@@ -535,6 +535,26 @@
 		</axis>
 </animation>
 
+
+<animation>
+	<type>rotate</type>
+	<object-name>canopy</object-name>
+	<object-name>canopy-frame</object-name>
+	<object-name>canopy-inner</object-name>
+	<property>controls/canopy/position-norm</property>
+	<factor>45</factor>
+	<center>
+		<x-m>0.24</x-m>
+		<y-m>0</y-m>
+		<z-m>0.76</z-m>
+	</center>
+	<axis>
+		<x>0</x>
+		<y>1.0</y>
+		<z>0</z>
+	</axis>
+</animation>
+ 
 <animation>
 	<type>shader</type>
 	<shader>chrome</shader>
@@ -649,6 +669,7 @@
 	<object-name>nose-strakes</object-name>
 	<object-name>ventral-fin</object-name>
 	<object-name>vstab</object-name>
+	<object-name>canopy-frame</object-name>
 	
 	<property-base>sim/model/livery</property-base>
 	<texture-prop>texture-main</texture-prop>
